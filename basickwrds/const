@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+const float pi=3.14;
+class circle{
+    float radius;
+    public:
+        void get_data(){
+            cout<<"Enter the value of the radius ";
+            cin>>radius;
+            cout<<endl;
+
+        }
+        float area(){
+            cout<<"The area of the circle is "<<pi*radius*radius<<endl;
+            
+            return 0;
+        }
+        float perimeter(){
+            cout<<endl;
+            cout<<"The perimeter of the circle is "<<2*pi*radius;
+            return 0;
+
+        }
+};
+int main(){
+    circle c;
+    c.get_data();
+    string a;
+    cout<<"Enter your choices"<<endl;
+    cin>>a;
+    if(cin.fail()){
+        cout<<"Invalid Input"<<endl;
+
+    }
+    else{
+        if (a=="area"|| a=="Area"){
+            c.area();
+        }
+        else if (a=="perimeter" || a=="Perimeter"){
+            c.perimeter();
+
+        }
+    }
+}
