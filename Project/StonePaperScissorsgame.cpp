@@ -53,10 +53,10 @@ int main(){
 
         }
         else{
-            cout<<"..............Exitting the game........... "<<endl;
+            cout<<"..............Exiting the game........... "<<endl;
             break;
         }
     }
-    cout<<".......................Sucessfully Exitted the match your total score is "<<count<<endl;    
+    cout<<".......................Sucessfully Exited the match your total score is "<<count<<endl;    
 
 }
