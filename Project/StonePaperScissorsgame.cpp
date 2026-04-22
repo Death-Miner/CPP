@@ -17,9 +17,15 @@ int main(){
         cout<<"Enter your guess"<<endl;
         cin>>user_guess;
           for(int i=0;i<user_guess.size();i++){
-            user_guess[0]=toupper(user_guess[0]);
-        
-            user_guess[i+1]=tolower(user_guess[i+1]);
+            if(i==0){
+
+                user_guess[i]=toupper(user_guess[i]);
+            }
+            else{
+
+                
+                user_guess[i]=tolower(user_guess[i]);
+            }
         
 
 
