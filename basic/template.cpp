@@ -7,9 +7,11 @@ template <class c1>
 class marks{
     public:
     vector <c1> marks;
-    c1 mark
+    c1 mark;
     int n;
-    void get_makrs(){
+    void get_marks(){
+        cout<<"Enter the total subject of the student "<<endl;
+        cin>>n;
         for(int i=0;i<n;i++){
             cout<<"Enter the marks of the "<<i+1<<"subject"<<endl;
             cin>>mark;
@@ -19,16 +21,16 @@ class marks{
 
     }
     void display_marks(){
-        vector <c1> ::iterator itr;
+    
         int i=1;
         for(auto itr=marks.begin();itr!=marks.end();itr++,i++){
-            cout<<"marks of the subject "<<i <<" are "<<*itr;
+            cout<<"marks of the subject "<<i <<" are "<<*itr<<endl;
         }
     }
 
 };
 template <class c1,class c2>
-class student_profile:public marks{
+class student_profile:public marks<c1>{
     c1 name;
     c2 reg_id;
     public:
@@ -39,6 +41,19 @@ class student_profile:public marks{
         cin>>reg_id;
         
     }
-
-
+    void show_details(){
+        cout<<"The name of the student is "<<name<<endl;
+        cout<<"Registration id of the student is "<<reg_id<<endl;
+    }
+    
+    
+    
 };
+int main(){
+    student_profile<string,int>s1;
+    s1.get_details();
+    s1.get_marks();
+    s1.show_details();
+    s1.display_marks();
+
+}
