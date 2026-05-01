@@ -8,11 +8,13 @@ class marks{
     public:
     vector <c1> marks;
     c1 mark;
+    string subject;
     int n;
     void get_marks(){
         cout<<"Enter the total subject of the student "<<endl;
         cin>>n;
         for(int i=0;i<n;i++){
+           
             cout<<"Enter the marks of the "<<i+1<<"subject"<<endl;
             cin>>mark;
             marks.push_back(mark);
@@ -51,9 +53,24 @@ class student_profile:public marks<c1>{
 };
 int main(){
     student_profile<string,int>s1;
-    s1.get_details();
-    s1.get_marks();
-    s1.show_details();
-    s1.display_marks();
+    student_profile<string,string>s2;
+    string x;
+    cout<<"Name and Registration number format "<<endl;
+    cout<<"If you want String Int format write in format strint /n If you want String String format write strstr " <<endl;
+    getline(cin,x);
+    if(x=="strint"){
+
+        s1.get_details();
+        s1.get_marks();
+        s1.show_details();
+        s1.display_marks();
+    }
+    else if(x=="strstr"){
+        
+        s2.get_details();
+        s2.get_marks();
+        s2.show_details();
+        s2.display_marks();
+    }
 
 }
